@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
 	public float xTilt = 10;
 
 	Vector3 destination = Vector3.zero;
-	BodyController bodCon;
+	BodyControllerScript bodCon;
 	float rotateVel = 0;
 
 	// Use this for initialization
@@ -36,9 +36,9 @@ public class CameraController : MonoBehaviour
 		target = t;
 		if (target != null) 
 		{
-			if (target.GetComponent<BodyController> ()) 
+			if (target.GetComponent<BodyControllerScript> ()) 
 			{
-				bodCon = target.GetComponent<BodyController> ();
+				bodCon = target.GetComponent<BodyControllerScript> ();
 			} 
 			else
 				Debug.LogError ("Camera's Target needs a BodyController");
